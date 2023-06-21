@@ -50,3 +50,24 @@ The font size of each heading is default h1 to h6. large to small
 Good practice is to maintain a single h1 tag
 
 ----------------------------------
+Inspect tool
+-We can inspect the entire webpage with this option
+-Just right click on any webpage and select Inspect
+-In the inspect page on top left we see an option to select an item to inspect.
+-Select that and select any section of the webpage, the corresponding code is highlighted in the inspect section.
+-We can edit that and see the changes affected onto the webpage
+-Since it is being modified in the local machine, upon refreshing, the webpage gets back to its normal state.
+-----------------------------------
+
+HTML Skeleton Explained
+
+<!DOCTYPE html> // The DOCTYPE must be present. It informs the browser that this is an HTML document.
+-DOCTYPE is a flag so it does not need a closing tag.
+
+<html lang="en">
+
+</html>         // An html start tag and an html end tag define the start and end of an HTML document.
+-Also known as root element
+-Permitted content:	One <head> element, followed by one <body> element.
+-Tag omission:	    The start tag may be omitted if the first thing inside the <html> element is not a comment.
+                    The end tag may be omitted if the <html> element is not immediately followed by a comment.
