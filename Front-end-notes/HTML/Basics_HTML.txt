@@ -1,0 +1,52 @@
+HTML - Hypertext Markup Language
+-Its a markup Language
+-We don't implement complex logics here.
+-Just markup a plain text onto a webpage.
+
+
+-HTML Elements
+<p> element represents a paragraph of text
+<i> elements represents Italic text.
+<h1> element repressents the main header on a page
+<img> element embeds an image
+<form> element represents a form
+
+--------------------------------
+<p> element
+<p>I am a paragraph</p>
+--------------------------------
+
+<h> element
+<h1>Heading level 1</h1>
+<h2>Heading level 2</h2>
+<h3>Heading level 3</h3>
+<h4>Heading level 4</h4>
+<h5>Heading level 5</h5>
+<h6>Heading level 6</h6>
+
+Example:
+
+<h1>Beetles</h1>
+    <h2>External morphology</h2>
+        <h3>Head</h3>
+            <h4>Mouthparts</h4>
+        <h3>Thorax</h3>
+            <h4>Prothorax</h4>
+            <h4>Pterothorax</h4>
+
+Output:
+
+Beetles
+    External 
+    morphology
+        Head
+            Mouthparts
+        Thorax
+            Prothorax
+            Pterothorax
+
+Notes: 
+The font size of each heading is default h1 to h6. large to small
+Good practice is to maintain a single h1 tag
+
+----------------------------------
