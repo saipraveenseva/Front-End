@@ -173,3 +173,235 @@ Output:
     3.Vanoss
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Anchor tag <a>
+--------------
+
+The <a> HTML element (or anchor element), with its href attribute, creates a hyperlink to web pages, files, email addresses, locations in the same page, or anything else a URL can address.
+Content within each <a> should indicate the link's destination. If the href attribute is present, pressing the enter key while focused on the <a> element will activate it.
+
+Example:
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+
+Output:
+You can reach Michael at:
+
+*Website
+*Email
+*Phone
+
+Note: You can use this anchor tag to get back to any URL or a local files
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h1>About me</h1>
+    <a href="Jordan_Peterson.html">Go Home</a>
+</head>
+
+<body>
+
+</body>
+
+</html>
+--------------------------------------------------------------------------------------------------------------------------------------------
+Image tag <img>
+
+    <img align="right" width="500px" alt="This is a Jordan peterson image" src="pictures/JordanPeterson.jpg">
+
+    Attributes:
+    *align is used to align the pictures
+    *src is used to source the image
+    *width is used to assign the pixel size.
+    *alt tag has the text that should be read out by accessibility.
+    The source could be an image in the local machine or something on the internet.
+    We have to include a url to source an image from the internet
+
+    <img align="left"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Peterson_Lecture_%2833522701146%29.png/330px-Peterson_Lecture_%2833522701146%29.png">
+
+    <img align="left"
+        src="https://scontent-maa2-2.xx.fbcdn.net/v/t39.30808-6/323430656_495319199164204_816737870013790965_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=xj-Im8HItC8AX_Qdt8n&_nc_ht=scontent-maa2-2.xx&oh=00_AfDeSu7pEU7L70QJK8xB-GejvfVuxwN6Ui6AePL0ZBE5oA&oe=64A3E707">
+
+    https://scontent-maa2-2.xx.fbcdn.net/v/t39.30808-6/323430656_495319199164204_816737870013790965_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=xj-Im8HItC8AX_Qdt8n&_nc_ht=scontent-maa2-2.xx&oh=00_AfDeSu7pEU7L70QJK8xB-GejvfVuxwN6Ui6AePL0ZBE5oA&oe=64A3E707
+    Inorder to get an image address, right click on any image that has privileges and select "Image address"
+
+----------------------------------------------------------------------------------------------------------------------------------------
+    Comment in html.
+
+        <!-- Line commented-->
+        Ctrl + / Comments a html line 
+----------------------------------------------------------------------------------------------------------------------------------------
+HTML5
+
+The term HTML5 is essentially a buzzword that refers to a set of modern web technologies. This includes the HTML Living Standard, along with JavaScript APIs to enhance storage, multimedia, and hardware access.
+You may sometimes hear about "new HTML5 elements", or find HTML5 described as a new version of HTML. 
+HTML5 was the successor to previous HTML versions and introduced new elements and capabilities to the language on top of the previous version, HTML 4.01, as well as improving or removing some existing functionality. 
+However, as a Living Standard HTML now has no version. The up-to-date specification can be found at html.spec.whatwg.org/.
+
+html standard : https://html.spec.whatwg.org/
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+<div>: The Content Division element
+
+The <div> HTML element is the generic container for flow content. 
+It is used to contain an content into a single block. We can contain them only using CSS. this will be covered in the later sessions.
+It has no effect on the content or layout until styled in some way using CSS (e.g. styling is directly applied to it, or some kind of layout model like Flexbox is applied to its parent element).
+
+Example:
+
+HTML code
+
+<div class="warning">
+    <img src="/media/examples/leopard.jpg"
+         alt="An intimidating leopard.">
+    <p>Beware of the leopard</p>
+</div>
+
+CSS code
+.warning {
+    border: 10px ridge #f00;
+    background-color: #ff0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.warning img {
+    width: 100%;
+}
+
+.warning p {
+    font: small-caps bold 1.2rem sans-serif;
+    text-align: center;
+}
+
+Output:
+Reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div
+
+Inline Elements vs Block elements:
+    Inline elements stay on a single line. anchor tag<a> is the example. 
+    Block elements start on the next line. heading tags<h1>, paragraph tag<p> are an example.
+    This is explained better in CSS sessions
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+Span element <span>
+    The <span> HTML element is a generic inline container for phrasing content, which does not inherently represent anything. 
+    It can be used to group elements for styling purposes (using the class or id attributes), or because they share attribute values, such as lang. 
+    It should be used only when no other semantic element is appropriate. <span> is very much like a <div> element, but <div> is a block-level element whereas a <span> is an inline-level element.
+    Effect is seen only when CSS is involved.
+
+    Example:
+
+    HTML code:
+    
+    <p>Add the <span class="ingredient">basil</span>, <span class="ingredient">pine nuts</span> and <span class="ingredient">garlic</span> to a blender and blend into a paste.</p>
+
+    <p>Gradually add the <span class="ingredient">olive oil</span> while running the blender slowly.</p>
+
+    CSS code:
+
+    span.ingredient {
+    color: #f00;
+    }
+
+    Output:
+    Add the basil, pine nuts and garlic to a blender and blend into a paste.
+    Gradually add the olive oil while running the blender slowly.
+
+    The words basel, pine nuts, garlic and olive oil will be in red color.
+-------------------------------------------------------------------------------------------------------------------------------------------------
+<hr>: The Thematic Break (Horizontal Rule) element
+    The <hr> HTML element represents a thematic break between paragraph-level elements: 
+    for example, a change of scene in a story, or a shift of topic within a section.
+    Just displays a line under a heading or image etc..
+
+    HTML code:
+
+    <p>§1: The first rule of Fight Club is: You do not talk about Fight Club.</p>
+
+    <hr>
+
+    <p>§2: The second rule of Fight Club is: Always bring cupcakes.</p>
+
+    Output:
+    §1: The first rule of Fight Club is: You do not talk about Fight Club.
+    ----------------------------------------------------------------------
+    §2: The second rule of Fight Club is: Always bring cupcakes.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+<br>: The Line Break element
+The <br> HTML element produces a line break in text (carriage-return). 
+It is useful for writing a poem or an address, where the division of lines is significant.
+
+Example:
+<p> O’er all the hilltops<br>
+    Is quiet now,<br>
+    In all the treetops<br>
+    Hearest thou<br>
+    Hardly a breath;<br>
+    The birds are asleep in the trees:<br>
+    Wait, soon like these<br>
+    Thou too shalt rest.
+</p>
+
+Output:
+O’er all the hilltops
+Is quiet now,
+In all the treetops
+Hearest thou
+Hardly a breath;
+The birds are asleep in the trees:
+Wait, soon like these
+Thou too shalt rest.
+
+Note: Instead of writing everyline under paragraph tag <p>, we can use <br> tag to break the line.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+<sup>: The Superscript element
+The <sup> HTML element specifies inline text which is to be displayed as superscript for solely typographical reasons. 
+Superscripts are usually rendered with a raised baseline using smaller text.
+a2 + 2ab + b2 = (a+b)2. It is not showing in an elevated view but the squares in this formula are displayed on a elevated level.
+
+Example:
+
+<p>The <em>Pythagorean theorem</em> is often expressed as the following equation:</p>
+
+<p><var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var></p>
+
+Output:
+
+The Pythagorean theorem is often expressed as the following equation:
+
+a2 + b2 = c2
+
+
+Wikipedia citation is another good example.
+------------------------------------------------------------------------------------------------------------------------------------------------
+<sub>: The Subscript element
+The <sub> HTML element specifies inline text which should be displayed as subscript for solely typographical reasons. 
+Subscripts are typically rendered with a lowered baseline using smaller text.
+Chemical formulas is an exampled for lowered base line text.
+
+Example:
+
+<p>Almost every developer's favorite molecule is
+C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>, also known as "caffeine."</p>
+
+Output:
+
+Almost every developer's favorite molecule is C8H10N4O2, also known as "caffeine."
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
