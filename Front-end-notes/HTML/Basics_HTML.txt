@@ -404,4 +404,217 @@ Output:
 Almost every developer's favorite molecule is C8H10N4O2, also known as "caffeine."
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
+HTML Entity codes
 
+    These codes are used to print some special characters or symbols that cannot be entered using a keyboard. Like aces, spades, copyright symbol, diamond.
+    The characters like < , > , & also should be represented using these codes. The browser will be able to comprehend these symbols, but it is A
+    good practice to use entity codes to display these characters/symbols.
+
+    You can find entity codes here: https://entitycode.com/#featured-content
+
+    Examples:
+    &lt; - <
+    &gt; - >
+    &amp; - &
+    &#169; - copyright symbol.
+--------------------------------------------------------------------------------------------------------------------------------
+Semantics in markup
+Instead of using <div> tags for the entire webpage to group a bunch of elements, we can provide a decent sematic or meaning to each <div> by replacing it 
+with elements like header, nav, section, footer etc.
+These elements does the same job as <div> but gives a semantic and adds meaning to the code. A good practice.
+From a google crawler perspective, it would be easier for the crawler to find the nav tags and show relevant content from your webpage on the google search results.
+
+Some of these <div> alternatives are
+    section
+    article
+    nav
+    main
+    header
+    footer
+    aside 
+    summary
+    details
+--------------------------------------------------------------------------------------------------------------------------------------------------
+<main> element
+The <main> HTML element represents the dominant content of the <body> of a document. 
+The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
+A document mustn't have more than one <main> element that doesn't have the hidden attribute specified.
+A good practice is to exclude sidebars, nav bars, search bar etc..
+Everything that is important must be placed in main.
+
+Example:
+
+<header>Gecko facts</header>
+
+<main>
+    <p>Geckos are a group of usually small, usually nocturnal lizards. They are found on every continent except Australia.</p>
+ 
+    <p>Many species of gecko have adhesive toe pads which enable them to climb walls and even windows.</p>
+</main>
+
+Output:
+
+Gecko facts
+Geckos are a group of usually small, usually nocturnal lizards. They are found on every continent except Australia.
+Many species of gecko have adhesive toe pads which enable them to climb walls and even windows.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+<nav> element
+
+    nav is used to provide navigation links.
+    Anything that is to be navigated within a same webpage or to a different website.
+    We use nav for navigation. 
+
+    Example:
+
+    <nav class="crumbs">
+    <ol>
+        <li ><a href="#">Bikes</a></li>
+        <li ><a href="#">BMX</a></li>
+        <li >Jump Bike 3000</li>
+    </ol>
+</nav>
+
+<h1>Jump Bike 3000</h1>
+<p>This BMX bike is a solid step into the pro world. It looks as legit as it rides and is built to polish your skills.</p>
+
+Output:
+
+1. Bikes
+2. BMX
+3. Jump Bike 3000
+
+Jump Bike 3000
+This BMX bike is a solid step into the pro world. It looks as legit as it rides and is built to polish your skills.
+
+Note: Bikes and BMX are hyperlinks and Jump Bike 3000 is normal text.
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+<section>: The Generic Section element
+The <section> HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. 
+Sections should always have a heading, with very few exceptions.
+It doesn't have a specific meaning or semantic, its just writing code in a much more organized way.
+The section would help us acheive it. Every segment of the webpage can be written as a section.
+Nothing changes with or without section tag in terms of aesthetics.
+
+Example:
+
+<h1>Choosing an Apple</h1>
+<section>
+    <h2>Introduction</h2>
+    <p>This document provides a guide to help with the important task of choosing the correct Apple.</p>
+</section>
+
+<section>
+    <h2>Criteria</h2>
+    <p>There are many different criteria to be considered when choosing an Apple — size, color, firmness, sweetness, tartness...</p>
+</section>
+
+Output:
+
+Choosing an Apple
+Introduction
+This document provides a guide to help with the important task of choosing the correct Apple.
+
+Criteria
+There are many different criteria to be considered when choosing an Apple — size, color, firmness, sweetness, tartness...
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+<article>: The Article Contents element
+    The <article> HTML element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). 
+    Examples include: a forum post, a magazine or newspaper article, or a blog entry, a product card, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
+    Similar to section just to add a meaning.
+    Used for writing articles and stuff
+
+    Example:
+    <article class="forecast">
+    <h1>Weather forecast for Seattle</h1>
+    <article class="day-forecast">
+        <h2>03 March 2018</h2>
+        <p>Rain.</p>
+    </article>
+    <article class="day-forecast">
+        <h2>04 March 2018</h2>
+        <p>Periods of rain.</p>
+    </article>
+    <article class="day-forecast">
+        <h2>05 March 2018</h2>
+        <p>Heavy rain.</p>
+    </article>
+</article>
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+<aside>: The Aside element
+    The <aside> HTML element represents a portion of a document whose content is only indirectly related to the document's main content. 
+    Asides are frequently presented as sidebars or call-out boxes.
+    Used with CSS to tell the difference.
+
+    Example:
+
+    HTML code
+    <p>Salamanders are a group of amphibians with a lizard-like appearance, including short legs and a tail in both larval and adult forms.</p>
+
+    <aside>
+        <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+    </aside>
+
+    <p>Several species of salamander inhabit the temperate rainforest of the Pacific Northwest, including the Ensatina, the Northwestern Salamander and the Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects, worms and other small creatures.</p>
+
+    CSS code:
+
+    aside {
+    width: 40%;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    float: right;
+    box-shadow: inset 5px 0 5px -5px #29627e;
+    font-style: italic;
+    color: #29627e;
+    }
+
+    aside > p {
+        margin: 0.5rem;
+    }
+
+    p {
+        font-family: 'Fira Sans', sans-serif;
+    }
+
+    Output reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+<header>
+    The <header> HTML element represents introductory content, typically a group of introductory or navigational aids. 
+    It may contain some heading elements but also a logo, a search form, an author name, and other elements.
+
+    Example:
+    <header>
+        <a class="logo" href="#">Cute Puppies Express!</a>
+    </header>
+
+    <article>
+    <header>
+        <h1>Beagles</h1>
+        <time>08.12.2014</time>
+    </header>
+    <p>I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and their ears are so, so snuggly soft!</p>
+    </article>
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+<footer>
+    The <footer> HTML element represents a footer for its nearest ancestor sectioning content or sectioning root element. 
+    A <footer> typically contains information about the author of the section, copyright data or links to related documents.
+
+Example:
+    <article>
+    <h1>How to be a wizard</h1>
+    <ol>
+        <li>Grow a long, majestic beard.</li>
+        <li>Wear a tall, pointed hat.</li>
+        <li>Have I mentioned the beard?</li>
+    </ol>
+    <footer>
+        <p>© 2018 Gandalf</p>
+    </footer>
+</article>
