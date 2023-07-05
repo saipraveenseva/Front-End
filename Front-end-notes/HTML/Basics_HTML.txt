@@ -618,3 +618,206 @@ Example:
         <p>© 2018 Gandalf</p>
     </footer>
 </article>
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+<time>: The (Date) Time element
+
+The <time> HTML element represents a specific period in time. 
+It may include the datetime attribute to translate dates into machine-readable format, allowing for better search engine results or custom features such as reminders.
+It may represent one of the following:
+    A time on a 24-hour clock.
+    A precise date in the Gregorian calendar (with optional time and timezone information).
+    A valid time duration.
+Note: This is just to indicate the time in the machine readable format and does not change any appearence on the webpage.
+Example:
+
+<p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde Park.</p>
+
+<p>The concert starts at <time datetime="20:00">20:00</time> and you'll be able to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.</p>
+
+Output:
+The Cure will be celebrating their 40th anniversary on July 7 in London's Hyde Park.
+
+The concert starts at 20:00 and you'll be able to enjoy the band for at least 2h 30m.
+---------------------------------------------------------------------------------------------------------------------------------------------
+<figure>: The Figure with Optional Caption element
+
+The <figure> HTML element represents self-contained content, potentially with an optional caption, which is specified using the <figcaption> element. 
+The figure, its caption, and its contents are referenced as a single unit.
+
+Example:
+
+HTML code:
+<figure>
+    <img src="/media/cc0-images/elephant-660-480.jpg"
+         alt="Elephant at sunset">
+    <figcaption>An elephant at sunset</figcaption>
+</figure>
+    
+CSS code:
+
+figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+
+img {
+    max-width: 220px;
+    max-height: 150px;
+}
+
+figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+
+Output reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure
+-------------------------------------------------------------------------------------------------------------------
+Important: Refer docs.emmet.io/cheetsheet for VS code emmet integration and formulas.
+-------------------------------------------------------------------------------------------------------------------
+
+HTML Tables
+
+<table>: The Table element
+The <table> HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data.
+We can represent images in tabular for as well
+
+Example:
+
+HTML code:
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">The table header</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>The table body</td>
+            <td>with two columns</td>
+        </tr>
+    </tbody>
+</table>
+
+CSS code:
+table,
+td {
+    border: 1px solid #333;
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+Output reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+
+
+
+Example 2:
+
+<p>Simple table with header</p>
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Doe</td>
+  </tr>
+</table>
+
+<p>Table with thead, tfoot, and tbody</p>
+<table>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
+</table>
+
+<p>Table with colgroup</p>
+<table>
+  <colgroup span="4"></colgroup>
+  <tr>
+    <th>Countries</th>
+    <th>Capitals</th>
+    <th>Population</th>
+    <th>Language</th>
+  </tr>
+  <tr>
+    <td>USA</td>
+    <td>Washington, D.C.</td>
+    <td>309 million</td>
+    <td>English</td>
+  </tr>
+  <tr>
+    <td>Sweden</td>
+    <td>Stockholm</td>
+    <td>9 million</td>
+    <td>Swedish</td>
+  </tr>
+</table>
+
+<p>Table with colgroup and col</p>
+<table>
+  <colgroup>
+    <col style="background-color: #0f0" />
+    <col span="2" />
+  </colgroup>
+  <tr>
+    <th>Lime</th>
+    <th>Lemon</th>
+    <th>Orange</th>
+  </tr>
+  <tr>
+    <td>Green</td>
+    <td>Yellow</td>
+    <td>Orange</td>
+  </tr>
+</table>
+
+<p>Simple table with caption</p>
+<table>
+  <caption>
+    Awesome caption
+  </caption>
+  <tr>
+    <td>Awesome data</td>
+  </tr>
+</table>
+
+Output reference: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table
+
+td : Table Data cell. Its a single cell in the table.
+th : Table Heading
+tr : Table row
+
+
