@@ -914,4 +914,4 @@ every filed must have a unique name that sends the get request to the server
         <input type="color" name="color" placeholder="Pick a color">
         <input type="number" name="number" placeholder="Enter number">
 </form>
-
+----------------------------------------------------------------------------------------------------
