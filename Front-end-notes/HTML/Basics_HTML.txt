@@ -842,7 +842,65 @@ HTML code:
   </div>
 </form>
 
+<form action="">
+        <input type="text" placeholder="Enter username">
+        <input type="password" placeholder="Enter password">
+        <input type="color" placeholder="Pick a color">
+        <input type="number" placeholder="Enter number">
+    </form>
+
 
     *The action attribute indicates where the form data should go.
     *The method attribute specified which HTTP method should be used.
+    *The input attribute can take input of around 20 types of data.
+    *Find different types of data in this link https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+     
+
+--------------------------------------------------------------------------------------------------------------------
+
+<label>: The Label element
+
+*label element makes it easier for the screenreader to read out the whats the label.
+*A good example would be for checkbox input.
+*It allows the screen reader to know that this particular text is associated with this check box
+*The text in the label is actually clickable. You can tap on the label text and the checkpoint gets activated/deactivated.
+
+<div class="preference">
+  <label for="cheese">Do you like cheese?</label>
+  <input type="checkbox" name="cheese" id="cheese" />
+</div>
+
+<div class="preference">
+  <label for="peas">Do you like peas?</label>
+  <input type="checkbox" name="peas" id="peas" />
+</div>
+
+*The id in the input element is an identifier associated to the checkbox. We use the identifier and associate it to the label.
+*id should be unique for every input element
+
+--
+<label>
+  Enter a number:
+  <input type="number" placeholder="Select a number">
+</label>
+
+*THis is a nested label. You wont need a "for" in the label if we use nested labels
+--
+-----------------------------------------------------------------------------------------------
+<button>: The Button element
+
+The <button> HTML element is an interactive element activated by a user with a mouse, keyboard, finger, voice command, or other assistive technology. 
+Once activated, it then performs an action, such as submitting a form or opening a dialog.
+
+<button class="favorite styled" type="button">Add to favorites</button>
+
+<button type="button">Submit</button> inside a form element will redirect to location specified in the "action" attribute of the form element.
+
+* button can be represented with the "input" attribute as well.
+<input type="submit">
+
+*For custom texts on a button. Below are the syntaxes
+<button type="button">Submit..!!</button>
+<input type="submit" value="Submit..!!"</button>
+
 
