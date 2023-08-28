@@ -846,7 +846,7 @@ HTML code:
         <input type="text" placeholder="Enter username">
         <input type="password" placeholder="Enter password">
         <input type="color" placeholder="Pick a color">
-        <input type="number" placeholder="Enter number">
+        <input type="number" placeholder="Enter number" min="1" max="11" step="1" value="11">
     </form>
 
 
@@ -915,3 +915,86 @@ every filed must have a unique name that sends the get request to the server
         <input type="number" name="number" placeholder="Enter number">
 </form>
 ----------------------------------------------------------------------------------------------------
+Search bar for Google and youtube using Form
+
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search YouTube</button>
+    </form>
+
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+
+* You can omit Submit button. Once we type something and hit Enter, it automatically searches with the text input. No need of button
+* For youtube, you have to use "search_query" as the name in the input
+* For Google, you have to use "q" as the name in the input.
+---------------------------------------------------------------------------------------------------------
+* Search on youtube using Radio button inputs
+* Since we have to pick anyone and not multiple, we should have same name for all inputs.
+* value is what passed as a input 
+ 
+ <form action="https://www.youtube.com/results">
+
+
+        <input type="radio" name="search_query" value="Jordan Peterson">
+        <label for="jp">Jordan Peterson</label><br>
+
+
+        <input type="radio" name="search_query" id="dg" value="David Goggins">
+        <label for="dg">David Goggins</label><br>
+
+
+        <input type="radio" name="search_query" id="jr" value="Joe Rogan">
+        <label for="jr">Joe Rogan</label><br>
+
+        <button>Search YouTube</button>
+</form>
+
+---------------------------------------------------------------------------------------------------------------
+* Search on YouTube using input from a drop down list(select)
+* Since we are using YouTube, we must use "search_query" as the name
+
+<p>************Search using select(drop down list)*************</p>
+    <form action="https://www.youtube.com/results">
+
+        <select name="search_query" id="options">
+            <option value="">Please select an option</option>
+            <option value="Jordan Peterson">Jordan Peterson</option>
+            <option value="David Goggins">David Goggins</option>
+            <option value="Joe Rogan">Joe Rogan</option>
+        </select>
+        <button>Search YouTube</button>
+    </form>
+</p>
+
+** <option value="David Goggins" selected>David Goggins</option>
+* The selected keyword will show the option by default.
+--------------------------------------------------------------------------------------------------------------------
+* Google Search for a number using a slider(Range)
+* Since its a google search we use name="q"
+* Along with min and max, step provides a clear visual of which level we are in.
+* On a smooth slider we wont be able to tell, but with a step, we can actually see the bar move by 1 step.
+* Depends on the step count you have given in the input
+* "value" denotes the default value
+
+<p>************Google search for numbers using slidebar(range). Retarded shit*************</p>
+    <form action="https://www.google.com/search">
+        <input type="range" id="number" name="q" min="0" max="11" step="1" value="3">
+        <label for="number">Select number</label>
+        <button>Search Google</button>
+    </form>
+
+</p>
+--------------------------------------------------------------------------------------------------------------------
+* textarea takes long lines as input
+** The input taken from textarea cannot be used as an input to any search like google or youtube
+
+<p>************textarea*************</p>
+    <form action=""></form>
+    <label for="paragraph">Search for a song</label><br>
+    <textarea name="q" id="paragraph" cols="10" rows="10"></textarea>
+    <button>Submit</button>
+</p>
+----------------------------------------------------------------------------------------------------------------------
