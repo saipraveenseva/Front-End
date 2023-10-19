@@ -1,0 +1,116 @@
+Purple - CSS - Adjectives
+Dino - HTML Nouns
+Danced - JS - Verbs
+
+
+Focuses more on visual representation of the website
+
+CSS - Cascading Style Sheets
+CSS is a language for describing how documents are presented visually - how they are arranged and styled.
+
+CSS is easy to get the hang of but it can be intimidating because of how many properties we can manipulate
+---------------------------------------------------------------
+Syntax:
+
+selector{
+    property: value;
+}
+
+h1{
+    color:purple;
+}
+
+img{
+    width: 100px;
+    height: 200px;
+}
+
+input[type="text"] : nth-of-type(2n){
+    border:2px solid red;
+}
+-----------------------------------------------------------------
+
+-SO many border properties
+
+*****CSS References******
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+------------------------------------------------------------------
+
+Including styles:
+
+1. Inline styles
+    You can write your styles directly inline on each element but this not a 
+    good practice.
+    Example:
+    <h1 style="color:red">Its not over until I win!!</h1>
+
+2. The Style element
+    You can write your styles inside of a <style> element. This is easy,
+    but it makes it impossible to share styles between documents. Not recommended either.
+    This style element is written in the <head> section.
+    Example:
+     <style>
+        h2 {
+            color: aquamarine;
+        }
+    </style> is written in the head
+     <h2>Its about how hard you can get hit, and keep moving forward!!!</h2> is written in the body.
+    
+3. External stylesheet
+    Write your styles in a .css file and then include the using a <link? in the head of your html doucment. Recommended...!!
+    This external stylesheet is a seperate style sheet where we declare all the properties and they will apply to the main document
+    Example:
+    h3 {
+    color: rgb(2, 31, 255);
+    } is written in a seperate .css file
+    <h3> Apollo Creed</h3>
+    <h3>Micky</h3> is written in body section
+------------------------------------------------------------------------------
+
+Color and Background-Color properties
+
+color: rebeccapurple;
+color: #00a400;
+color: rgb(214, 122, 127);
+color: hsl(30deg 82% 43%);
+color: hsla(237deg 74% 33% / 61%);
+color: hwb(152deg 0% 58% / 70%);
+
+h3 {
+    color: rgb(6, 20, 122);
+}
+
+button {
+    color: magenta;
+    background-color: white;
+}
+
+p {
+    color: olive;
+    background: orange;
+
+}
+
+
+*** background and background-color are functionally different
+    background-color is used to insert background color to any element.
+    background is used to insert images, color etc..
+
+***You can get the color names, Hex codes and RGB codes from here:
+https://htmlcolorcodes.com/color-names/
+
+RGB codes:
+
+rgb(255,0,0) - red
+rgb(0,0,255) - blue 
+rgb(0,255,0) - Green
+rgb(173, 20, 219) - Purple
+rgb(0,0,0) - Black
+rgb(255,255,255) - White
+
+
+HEX codes:
+#ffff00 - Yellow or #ff0 is also an Yellow.
+#0f5679 - Dark bluish color
+
